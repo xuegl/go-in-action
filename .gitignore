@@ -17,3 +17,7 @@
 # IDE
 .idea
 .vscode
+
+# Test assets
+image-manipulation/assets
+!image-manipulation/assets/gopher.jpg
