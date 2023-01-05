@@ -19,5 +19,5 @@
 .vscode
 
 # Test assets
-image-manipulation/assets
-!image-manipulation/assets/gopher.jpg
+image_manipulation/assets
+!image_manipulation/assets/gopher.jpg
