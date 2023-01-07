@@ -21,3 +21,4 @@
 # Test assets
 image_manipulation/assets
 !image_manipulation/assets/gopher.jpg
+file_upload/avatars
