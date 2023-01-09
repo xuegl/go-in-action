@@ -70,7 +70,7 @@ func NewImage(path string) (*Image, error) {
 	for y := 0; y < height; y++ {
 		var row []Pixel
 		for x := 0; x < width; x++ {
-			pixel := rgbaToPixel(img.At(x, y).RGBA())
+			pixel := colorToPixel(img.At(x, y))
 			row = append(row, pixel)
 		}
 		pixels = append(pixels, row)
@@ -85,7 +85,8 @@ func NewImage(path string) (*Image, error) {
 	}, nil
 }
 
-func rgbaToPixel(r, g, b, a uint32) Pixel {
+func colorToPixel(c color.Color) Pixel {
+	r, g, b, a := c.RGBA()
 	return Pixel{
 		R: uint8(r >> 8),
 		G: uint8(g >> 8),
